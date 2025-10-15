@@ -1,0 +1,164 @@
+.coffee-card {
+  background: rgba(17, 19, 21, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coffee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.coffee-image-container {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.coffee-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.coffee-card:hover .coffee-image {
+  transform: scale(1.05);
+}
+
+.popular-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #F6C768;
+  color: #111315;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.coffee-info {
+  padding: 1rem;
+}
+
+.coffee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.coffee-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FEF7EE;
+  margin: 0;
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.coffee-price {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111315;
+  background: #BEE3CC;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.coffee-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.star-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.star-icon.empty {
+  opacity: 0.3;
+}
+
+.rating-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #FEF7EE;
+}
+
+.votes {
+  font-size: 0.875rem;
+  color: #6F757C;
+}
+
+.no-rating {
+  font-size: 0.875rem;
+  color: #6F757C;
+}
+
+.sold-out {
+  font-size: 0.875rem;
+  color: #ED735D;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .coffee-image-container {
+    height: 140px;
+  }
+  
+  .coffee-info {
+    padding: 0.75rem;
+  }
+  
+  .coffee-name {
+    font-size: 0.9rem;
+  }
+  
+  .coffee-price {
+    font-size: 0.8rem;
+  }
+  
+  .rating-value,
+  .votes,
+  .no-rating,
+  .sold-out {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .coffee-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .coffee-price {
+    align-self: flex-end;
+  }
+  
+  .coffee-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}

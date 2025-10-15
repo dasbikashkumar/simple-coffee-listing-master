@@ -1,0 +1,153 @@
+.app {
+  min-height: 100vh;
+  background-image: url('/resources/bg-cafe.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header-content {
+  background: linear-gradient(135deg, rgba(17, 19, 21, 0.9), rgba(17, 19, 21, 0.7));
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+  position: relative;
+}
+
+.header-content::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: 20px;
+  width: 257px;
+  height: 153px;
+  background-image: url('/resources/vector.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #FEF7EE;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #6F757C;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 588px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  background: #6F757C;
+  border-radius: 12px;
+  padding: 4px;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.filter-tab {
+  background: transparent;
+  border: none;
+  color: #FEF7EE;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.filter-tab.active {
+  background: #6F757C;
+  color: #FEF7EE;
+}
+
+.filter-tab:hover {
+  background: rgba(111, 117, 124, 0.5);
+}
+
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+  
+  .header-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .header-content::before {
+    display: none;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .coffee-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  .filter-tabs {
+    max-width: 260px;
+  }
+  
+  .filter-tab {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .filter-tabs {
+    max-width: 240px;
+  }
+  
+  .filter-tab {
+    padding: 8px 16px;
+  }
+}
