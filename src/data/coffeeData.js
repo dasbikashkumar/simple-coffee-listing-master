@@ -58,5 +58,35 @@ export const coffeeData = [
     votes: 23,
     popular: false,
     available: true
+  },
+  {
+    id: 7,
+    name: "Americano",
+    image: "https://images.unsplash.com/photo-1545665225-b23b99e4d45e?w=300&h=200&fit=crop&crop=center",
+    price: "$3.20",
+    rating: 4.2,
+    votes: 42,
+    popular: false,
+    available: true
+  },
+  {
+    id: 8,
+    name: "Macchiato",
+    image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=300&h=200&fit=crop&crop=center",
+    price: "$4.80",
+    rating: 4.6,
+    votes: 28,
+    popular: false,
+    available: false
+  },
+  {
+    id: 9,
+    name: "Flat White",
+    image: "https://images.unsplash.com/photo-1497636577773-f1231844b336?w=300&h=200&fit=crop&crop=center",
+    price: "$4.20",
+    rating: 4.8,
+    votes: 31,
+    popular: true,
+    available: true
   }
 ];

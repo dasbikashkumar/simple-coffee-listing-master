@@ -63,7 +63,7 @@
   display: flex;
   gap: 0;
   justify-content: center;
-  background: #6F757C;
+  background: rgba(111, 117, 124, 0.3);
   border-radius: 12px;
   padding: 4px;
   max-width: 280px;
@@ -89,8 +89,8 @@
   color: #FEF7EE;
 }
 
-.filter-tab:hover {
-  background: rgba(111, 117, 124, 0.5);
+.filter-tab:hover:not(.active) {
+  background: rgba(111, 117, 124, 0.2);
 }
 
 .coffee-grid {
